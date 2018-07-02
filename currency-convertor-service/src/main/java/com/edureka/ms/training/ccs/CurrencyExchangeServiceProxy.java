@@ -13,6 +13,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 @RibbonClient(name = "forex-service")
 public interface CurrencyExchangeServiceProxy {
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
-    //@PostMapping
-    CurrencyConversion getExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to, CurrencyConversion currencyConversion);
+    CurrencyConversion getExchangeValue(@PathVariable("from") String from, @PathVariable("to") String to);
 }
