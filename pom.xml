@@ -18,6 +18,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
+	<modules>
+		<module>currency-convertor-service</module>
+		<module>edureka-server</module>
+		<module>forex-service</module>
+	</modules>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
