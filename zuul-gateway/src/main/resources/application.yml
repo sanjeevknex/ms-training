@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: zuul-gateway-service
+  sleuth:
+    sampler:
+      probability: 1
+server:
+  port: 8079
+zuul:
+  prefix: /api
+  routes:
+    currency-converter:
+      path: /currency-converter/**
+      serviceId: currency-conversion-service
+      stripPrefix: false
+    hello:
+      path: /hello
+      serviceId : forex-service
+
+eureka:
+  client:
+    service-url:
+      default: http://localhost:8761/eureka
+

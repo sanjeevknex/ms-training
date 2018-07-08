@@ -3,6 +3,7 @@ package com.edureka.ms.training.ccs;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import java.util.Map;
  * Created by sanjeev.singh1 on 01/07/18.
  */
 @RestController
+@Slf4j
 public class CurrencyConverterController {
 
 
@@ -30,6 +32,7 @@ public class CurrencyConverterController {
     //from currency to currentcy then quantity
     @GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversion convertCurrency(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity){
+        log.info("Inside get Exchange Value");
         Map<String, String> uiMap = new HashMap<>();
         uiMap.put("from", from);
         uiMap.put("to",to);

@@ -1,6 +1,10 @@
 spring:
   application:
     name: currency-conversion-service
+  sleuth:
+    sampler:
+      probability: 1
+
 server:
   port: 8100
 

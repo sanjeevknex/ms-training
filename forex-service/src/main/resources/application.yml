@@ -6,6 +6,9 @@ spring:
       enabled: true
   jpa:
     show-sql: true
+  sleuth:
+    sampler:
+      probability: 1
 
 server:
   port: 8000
